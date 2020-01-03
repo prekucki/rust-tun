@@ -13,16 +13,16 @@
 //  0. You just DO WHAT THE FUCK YOU WANT TO.
 
 error_chain! {
-	errors {
-		NameTooLong
-		InvalidName
-		InvalidAddress
-		InvalidDescriptor
-	}
+    errors {
+        NameTooLong
+        InvalidName
+        InvalidAddress
+        InvalidDescriptor
+    }
 
-	foreign_links {
-		Io(::std::io::Error);
-		Nul(::std::ffi::NulError);
-		ParseNum(::std::num::ParseIntError);
-	}
+    foreign_links {
+        Io(::std::io::Error);
+        Nul(::std::ffi::NulError);
+        ParseNum(::std::num::ParseIntError);
+    }
 }
